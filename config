@@ -169,7 +169,7 @@ client.placeholder          $bg      $bg        $cyan    $bg
 bar
 {
     position top
-    status_command i3blocks
+    status_command i3status -c /home/$USER/.config/i3status/i3status.conf
 }
 
 # Startup programs
