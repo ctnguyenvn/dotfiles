@@ -9,6 +9,8 @@ I3wm simple: urxvt, sublime text, vim, etc
 * i3-wm
 * i3lock-color
 * pulseaudio
+* xbacklight
+* imagemagick
 
 ## My vim config
 
@@ -22,11 +24,13 @@ cd vimrc && bash install.sh
 ## TODO list
 
 - [x] change colors
-- [ ] add new screenshot
-- [ ] create package for dependencies
+- [x] add new screenshot
+- [x] create/install package for dependencies
 - [ ] add installer
 - [x] change i3-status config
-- [ ] add ibus-unikey
+- [x] add ibus-unikey
 
 ## ScreenShot
 my config screenshot
+
+![screenshot](./wallpapers/i3wmsimple.png)
