@@ -86,6 +86,22 @@ else
 	fi
 fi
 
+# sublime-merge for git client plugin
+if [[ -x "$(command -v /opt/sublime_merge/sublime_merge)" ]]; then
+	printf "${SUCCESS}[+] ${NORMAL}%s\n" "sublime_merge: $(/opt/sublime_merge/sublime_merge --version)"
+else
+	printf "${ERROR}[x] ${NORMAL}%s\n" "sublime_merge is not installed"
+	printf "${WARNING}==> Installing sublime_merge ${NORMAL}\n"
+
+	sudo -u $SUDO_USER yay -S sublime_merge --noconfirm
+	install_status=$?
+	if [[ $install_status -ne 0 ]]; then
+		printf "${ERROR}[x] %s${NORMAL}\n" "Install sublime_merge Failed..."
+	else
+		printf "${SUCCESS}[+] ${NORMAL}%s\n" "Install sublime_merge successfully..."
+	fi
+fi
+
 # php-codescniffer (package on arch AUR include phpcs and phpcbf) for phpcs plugin
 # gpg --keyserver keys.gnupg.net --recv-keys 31C7E470E2138192
 # gpg --keyserver pool.sks-keyservers.net --recv-keys A972B9ABB95D0B760B51442231C7E470E2138192
