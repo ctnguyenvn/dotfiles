@@ -15,7 +15,6 @@ set $mod Mod1
 # Hide titlebar
 new_window pixel
 for_window [class=".*"] border pixel 1
-<<<<<<< HEAD
 for_window [class=".*"] floating enable
 # for_window [class="<add WIN_CLASS using xprop>"] floating disable
 for_window [class="URxvt"] floating disable
@@ -25,8 +24,6 @@ for_window [class="TelegramDesktop"] floating disable
 for_window [class="Subl"] floating disable
 for_window [class="Sublime_merge"] floating enable
 for_window [class="Code"] floating disable
-=======
->>>>>>> origin/main
 bindsym $mod+Shift+t border normal
 bindsym $mod+T border pixel 1
 
@@ -44,10 +41,7 @@ bindsym $mod+q kill
 
 # Start rofi
 bindsym $mod+d exec dmenu_run
-<<<<<<< HEAD
 bindsym $mod+Shift+d exec "rofi -theme lb -show window"
-=======
->>>>>>> origin/main
 
 # Move between windows
 bindsym $mod+j focus left
@@ -144,11 +138,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Lock screen
 bindsym $mod+Shift+x exec /home/$USER/.config/scripts/lock.sh
 
-<<<<<<< HEAD
 # volume controls
-=======
-# set audio hotkey 
->>>>>>> origin/main
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
@@ -157,10 +147,7 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # DECREASE SCREEN BRIGHTNESS
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 # Resize window (you can also use the mouse for that)
 mode "resize"
 {
@@ -201,7 +188,6 @@ bar
 }
 
 # Startup programs
-<<<<<<< HEAD
 exec_always --no-startup-id feh --bg-scale /home/$USER/Pictures/backgrounds/background.jpg
 #exec --no-startup-id betterlockscreen -w dim
 exec --no-startup-id ibus-daemon -xdr
@@ -211,8 +197,3 @@ exec --no-startup-id nm-applet
 # hotkey some quick programe
 #bindsym $mod+x exec import /home/$USER/Pictures/laste-image.png
 bindsym $mod+x exec  flameshot gui -p /tmp
-=======
-#exec_always --no-startup-id ~/.scripts/monitors.sh
-exec_always --no-startup-id ibus-daemon -xdr
-#exec --no-startup-id betterlockscreen -w dim
->>>>>>> origin/main
